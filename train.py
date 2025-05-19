@@ -24,11 +24,11 @@ transform = transforms.Compose([
 
 # Load training and test datasets from torchvision with normalization applied
 train_dataset = datasets.MNIST(root='./data', train=True, transform=transform, download=True)
-test_dataset = datasets.MNIST(root='./data', train=False, transform=transform, download=True)
+
 
 # Split data into batches
 train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True)
-test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
+
 
 
 
@@ -57,4 +57,9 @@ for epoch in range(num_epochs):
         running_loss += loss.item()
 
     print(f"Epoch [{epoch+1}/{num_epochs}], Loss: {running_loss/len(train_loader):.4f}")
+    
+    
+torch.save(model.state_dict(), "mnist_cnn.pth")
+print("Model saved to mnist_cnn.pth")
+
 
