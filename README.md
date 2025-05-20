@@ -1,18 +1,24 @@
 # MNIST Classifier
 
-I studied AI from before, but I need to practice how to use git and organize its repository. And MNIST classifier is simple ML model with which practice git.
+I've studied AI from before, but I need more practice using git and organizing a repository. And MNIST classifier is a simple ML model that is perfect for practicing this.
 
 ## What is it?
 
-Implementing a CNN to classify 28x28 handwritten digits.
+Implementing a CNN to classifier 28x28 handwritten digits.
 
 ## Setup
 
-While setting up a new conda environment, I needed to install the required libraries using:
+To ensure flexibility and reusability, I built a general virtual environment that can be used across a wide range of machine learning projects.
+
+So I installed python packages into conda environment named general.
 
 ```bash
+conda activate general
 pip install torch torchvision
 ```
+
+
+
 
 ## Error encountered during training
 
@@ -47,7 +53,7 @@ Before flatten: torch.Size([64, 64, 14, 14])
 After flatten: torch.Size([256, 3136])
 ```
 
-I realized that even though I understood the theory of CNNs, I had overlooked how tensor shapes change through pooling layers.
+I realized that although I understood the CNN theory, I had overlooked how tensor shapes change after pooling layers.
 This led to a batch size mismatch error. After visualizing tensor shapes with print statements, I learned how important it is to trace dimensions carefully in real implementation.
 
 ## Training Log
@@ -65,11 +71,9 @@ The model trained well and achieved good convergence.
 
 
 
-### Revision (19/05)
+### Revision (19/05/2025)
 Erase test data at train.py
 Show accuracy at train process
-
-
 
 ## Test
 
@@ -77,10 +81,10 @@ Show accuracy at train process
 Test Accuracy: 99.18%
 ```
 
-Great!! But I need to know accruacy at each train loop
+Great!! But I realized I needed to track the accuracy during each training epoch.
 
 ## After revision
-'''text
+```text
 Epoch [1/5], Loss: 0.1750, Accuracy: 94.50%
 Epoch [2/5], Loss: 0.0646, Accuracy: 98.02%
 Epoch [3/5], Loss: 0.0496, Accuracy: 98.42%
@@ -91,4 +95,6 @@ Model saved to mnist_cnn.pth
 Test Accuracy: 99.15%
 ```
 
-Great!!
+
+## Think moment
+Next time, implementing classify CIFAR, I plan to compare performance of different CNN models. And split datasets into train and validation sets, visualize train/valid accuracy over the epochs.
