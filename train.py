@@ -22,7 +22,7 @@ transform = transforms.Compose([
     transforms.Normalize((0.1307,), (0.3081,)) 
 ])
 
-# Load training and test datasets from torchvision with normalization applied
+# Load training datasets from torchvision with normalization applied
 train_dataset = datasets.MNIST(root='./data', train=True, transform=transform, download=True)
 
 
@@ -37,7 +37,7 @@ model = MnistCNN().to(device)  # Move model to GPU if available
 criterion = nn.CrossEntropyLoss() # For classification, use Cross Enropy Loss
 optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 
-# Start train
+# Training loop
 for epoch in range(num_epochs):
     model.train()
     running_loss = 0.0
