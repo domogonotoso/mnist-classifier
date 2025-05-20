@@ -1,6 +1,6 @@
 # MNIST Classifier
 
-I've studied AI from before, but I need more practice using git and organizing a repository. And MNIST classifier is a simple ML model that is perfect for practicing this.
+I've studied AI before, but I need more practice using git and organizing a repository. And MNIST classifier is a simple ML model that is perfect for practicing this.
 
 ## What is it?
 
@@ -96,5 +96,5 @@ Test Accuracy: 99.15%
 ```
 
 
-## Think moment
+## Next step
 Next time, implementing classify CIFAR, I plan to compare performance of different CNN models. And split datasets into train and validation sets, visualize train/valid accuracy over the epochs.
