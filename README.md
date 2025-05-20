@@ -1,5 +1,7 @@
 # MNIST Classifier
 
+I studied AI from before, but I need to practice how to use git and organize its repository. And MNIST classifier is simple ML model with which practice git.
+
 ## What is it?
 
 Implementing a CNN to classify 28x28 handwritten digits.
@@ -59,3 +61,34 @@ Epoch [5/5], Loss: 0.0364
 ```
 
 The model trained well and achieved good convergence.
+
+
+
+
+### Revision (19/05)
+Erase test data at train.py
+Show accuracy at train process
+
+
+
+## Test
+
+```text
+Test Accuracy: 99.18%
+```
+
+Great!! But I need to know accruacy at each train loop
+
+## After revision
+'''text
+Epoch [1/5], Loss: 0.1750, Accuracy: 94.50%
+Epoch [2/5], Loss: 0.0646, Accuracy: 98.02%
+Epoch [3/5], Loss: 0.0496, Accuracy: 98.42%
+Epoch [4/5], Loss: 0.0402, Accuracy: 98.69%
+Epoch [5/5], Loss: 0.0351, Accuracy: 98.89%
+Model saved to mnist_cnn.pth
+
+Test Accuracy: 99.15%
+```
+
+Great!!

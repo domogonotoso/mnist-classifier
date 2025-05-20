@@ -41,6 +41,8 @@ optimizer = optim.Adam(model.parameters(), lr=learning_rate)
 for epoch in range(num_epochs):
     model.train()
     running_loss = 0.0
+    correct = 0
+    total = 0
 
     for batch_idx, (data, targets) in enumerate(train_loader):
         data, targets = data.to(device), targets.to(device)  # Move input data to the same device as model
@@ -55,9 +57,15 @@ for epoch in range(num_epochs):
         optimizer.step()
 
         running_loss += loss.item()
+        
+        # Accuracy calculation
+        _, predicted = torch.max(outputs, 1)
+        correct += (predicted == targets).sum().item()
+        total += targets.size(0)
 
-    print(f"Epoch [{epoch+1}/{num_epochs}], Loss: {running_loss/len(train_loader):.4f}")
-    
+    epoch_loss = running_loss / len(train_loader)
+    epoch_acc = 100 * correct / total
+    print(f"Epoch [{epoch+1}/{num_epochs}], Loss: {epoch_loss:.4f}, Accuracy: {epoch_acc:.2f}%")
     
 torch.save(model.state_dict(), "mnist_cnn.pth")
 print("Model saved to mnist_cnn.pth")

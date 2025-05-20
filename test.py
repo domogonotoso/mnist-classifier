@@ -21,3 +21,14 @@ transform = transforms.Compose([
 test_dataset = datasets.MNIST(root='./data', train=False, transform=transform, download=True)
 test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=False)
 
+# evaluation
+correct = 0
+total = 0
+with torch.no_grad():
+    for data, targets in test_loader:
+        outputs = model(data)
+        _, predicted = torch.max(outputs.data, 1) # get the index of the max probability from softmax
+        total += targets.size(0)
+        correct += (predicted == targets).sum().item()
+        
+print(f"Test Accuracy: {100 * correct / total:.2f}%")
