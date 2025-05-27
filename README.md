@@ -1,10 +1,11 @@
 # MNIST Classifier
 
+Implementing a CNN to classifier 28x28 handwritten digits.
+
+## Why?
+
 I've studied AI before, but I need more practice using git and organizing a repository. And MNIST classifier is a simple ML model that is perfect for practicing this.
 
-## What is it?
-
-Implementing a CNN to classifier 28x28 handwritten digits.
 
 ## Setup
 
