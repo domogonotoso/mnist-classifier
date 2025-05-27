@@ -1,10 +1,10 @@
 # MNIST Classifier
 
-Implementing a CNN to classifier 28x28 handwritten digits.
+Implementing a CNN to classify 28x28 handwritten digits.
 
 ## Why?
 
-I've studied AI before, but I need more practice using git and organizing a repository. And MNIST classifier is a simple ML model that is perfect for practicing this.
+I've studied AI before, but I need more practice using git and organizing a repository. And MNIST classifier is a simple ML model, making it perfect for practice.
 
 
 ## Setup
@@ -73,8 +73,8 @@ The model trained well and achieved good convergence.
 
 
 ### Revision (19/05/2025)
-Erase test data at train.py
-Show accuracy at train process
+Removed test data evaluation from `train.py` and added accuracy tracking during training.
+
 
 ## Test
 
@@ -98,4 +98,4 @@ Test Accuracy: 99.15%
 
 
 ## Next step
-Next time, implementing classify CIFAR, I plan to compare performance of different CNN models. And split datasets into train and validation sets, visualize train/valid accuracy over the epochs.
+Next, I plan to implement a classifier for CIFAR and compare the performance of different CNN models. And split datasets into train and validation sets, visualize train/valid accuracy over the epochs.
