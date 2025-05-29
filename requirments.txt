@@ -1,2 +1,4 @@
-torch>=2.0,<2.5
-torchvision>=0.14,<0.20
+- Python 3.8+
+- PyTorch
+- torchvision
+- matplotlib
