@@ -1,4 +1,4 @@
 - Python 3.8+
 - PyTorch
+- torch
 - torchvision
-- matplotlib
